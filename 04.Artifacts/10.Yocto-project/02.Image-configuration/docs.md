@@ -20,7 +20,7 @@ You can read more about this feature in the [Yocto Project Mega-Manual - 7.27. C
 
 If you do not want Mender to run as a system service, and you prefer to carry out update steps manually using the command line client interface, you can disable the service that starts Mender at boot.
 
-This is simple to accomplish by adding a `recipes-mender/mender/mender_%.bbappend` file in your Yocto Project layer, with the following content:
+This is simple to accomplish by adding `recipes-mender/mender-client/mender-client_%.bbappend`, `recipes-mender/mender-connect/mender-connect_%.bbappend`, and `recipes-mender/mender-configure/mender-configure_%.bbappend` files in your Yocto Project layer, all with the following content:
 
 ```bash
 SYSTEMD_AUTO_ENABLE = "disable"
